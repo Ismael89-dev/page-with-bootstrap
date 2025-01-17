@@ -1,0 +1,41 @@
+@mixin responsive($ScreenWidth){
+    @media (max-width: $ScreenWidth) {
+        @content;
+    }
+}
+
+@mixin flex($direction, $align, $justify){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin botaostyle ($width){
+    padding: 1.2rem 0;
+    width: $width;
+    border-radius: 2px;
+    background-color: rgb(0, 0, 255);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all .3s;
+    &:hover{
+        background-color: rgb(99, 99, 255);
+    }
+}
+
+@mixin botaoinput ($width, $height, $border){
+    padding-left: 1.7rem;
+    width: $width;
+    height: $height;
+    border: 1px solid $border;
+    margin-right: 2rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+
+
+ 

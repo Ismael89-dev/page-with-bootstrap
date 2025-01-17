@@ -1,0 +1,40 @@
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 9rem;
+    background-color: white;
+    display: flex;
+
+    .container{
+        @include flex(row, center, space-between);
+    }  
+
+    nav{
+        .menu{
+            width: 4rem;
+            display: none;
+        }
+        ul{
+            font-size: 1.6rem;
+            li{
+                a{
+                    color: black;
+                }
+                font-weight: bold;
+            }
+        }            
+    }
+
+    @include responsive(991px){
+        nav{
+            .nav{
+                display: none;
+            }
+            .menu{
+                display: block;
+            }
+        }
+    }
+}

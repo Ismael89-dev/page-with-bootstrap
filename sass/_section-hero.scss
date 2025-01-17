@@ -1,0 +1,76 @@
+.hero-section{
+    padding: 3rem 0;
+    margin-top: 12rem;
+    .container{
+        
+    }
+    .text-area{
+        max-width: 50%;
+        .text{
+            h1{
+                font-size: 4.6rem;
+                line-height: 150%;
+                margin-bottom: 2rem;
+                font-weight: bold;
+            }
+            p{
+                font-size: 1.7rem;
+                max-width: 52rem;
+                letter-spacing: 0.4px;
+                font-weight: bold;
+                max-width: 53rem;
+            }
+            margin-bottom: 2.3rem;
+        }
+        .email-area{
+            input{
+                @include botaoinput (30rem, 4rem, black);
+            }
+
+            button{
+                @include botaostyle (20rem);
+            }
+        }
+    }
+    .ilustration{
+        img{
+            max-width: 55rem;
+        }
+    }
+
+    @include responsive(991px){
+        div{
+            @include flex(row, center, center)
+        }
+        
+        .text-area{
+            max-width: 100%;
+            .text{
+                @include flex(column, center, center);
+                text-align: center;
+                p{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    @include responsive(560px){
+        .text-area{
+            .email-area{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                input{
+                    margin-right: 0;
+                }
+                button{
+                    margin-top: 2rem;
+                }
+            }    
+        }
+
+    }
+
+}

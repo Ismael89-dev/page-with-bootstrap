@@ -1,0 +1,49 @@
+.listar-tarefas{
+    padding: 15rem 0;
+    .container{
+        @include flex(row, center, center);
+    }
+    .content{
+        @include flex(column, center, center);
+        .entrada{
+            @include flex(row, center, center);
+            margin-bottom: 2rem;
+            input{
+                margin: 0;
+                margin-right: 2rem;
+                @include botaoinput (30rem, 4rem, black);
+            }
+
+            button{
+                @include botaostyle (20rem);
+            }            
+        }
+        ul{
+            @include flex(column, center, center);
+            width: 100%;
+            li{
+                width: 100%;
+               font-size: 1.6rem; 
+               font-weight: 600;
+               text-align: center;
+               &:not(:last-child){
+                    margin-bottom: 1.5rem;
+                    border-bottom: 1px solid black;
+               }
+            }
+        }
+    }
+
+    @include responsive(600px){
+        .content{
+            .entrada{
+                @include flex(column, center, center);  
+                input{
+                    margin-right: 0;
+                    margin-bottom: 2rem;
+                } 
+            }
+        }
+    }
+
+}

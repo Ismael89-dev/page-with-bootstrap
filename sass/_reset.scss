@@ -20,6 +20,7 @@ a{
 
 html{
     font-size: 62.5%;
+    overflow-x: hidden;
     @include responsive(1280px){
         font-size: 51.6%;
     }

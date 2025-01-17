@@ -25,6 +25,7 @@
         .email-area{
             input{
                 @include botaoinput (30rem, 4rem, black);
+                margin-right: 2rem
             }
 
             button{

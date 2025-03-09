@@ -39,6 +39,13 @@
         }
     }
 
+    @include responsive(1920px){
+        .text-area{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
     @include responsive(991px){
         div{
             @include flex(row, center, center)
